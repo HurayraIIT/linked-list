@@ -1,19 +1,6 @@
 #pragma once
 #include <iostream>
-
-class Node
-{
-    public:
-
-    int data;
-    Node *next;
-
-    Node (int val)
-    {
-        data = val;
-        next = 0;
-    }
-};
+#include "Node.h"
 
 class LinkedList
 {
