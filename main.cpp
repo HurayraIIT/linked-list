@@ -9,7 +9,8 @@ void TakeInputAndDoStuff (LinkedList *list)
     std::cin >> command;
 
     if (command[0]=='p') list->PrintList();
-    else if(command[0]=='q') return;
+    else if (command[0]=='q') return;
+    else if (command[0]=='m' && command[1]=='x') std::cout << "Maximum value: " << list->FindMaxValue() << std::endl;
     else if (command[0]=='i')
     {
         std::cin >> value;
@@ -26,7 +27,7 @@ void TakeInputAndDoStuff (LinkedList *list)
 void OperateLinkedList(LinkedList *list)
 {
     std::cout << "ih = insert at head;\nit = insert at tail;\nii = insert at index\n";
-    std::cout << "p = print linked list\nq = quit\n";
+    std::cout << "p = print linked list\nq = quit\nmx = find max value\n";
 
     TakeInputAndDoStuff(list);
     

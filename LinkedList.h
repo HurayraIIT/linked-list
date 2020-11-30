@@ -30,6 +30,30 @@ class LinkedList
     // TODO: Find the maximum element
     // TODO: Find the minimum element
 
+    int FindMaxValue (void)
+    {
+        if (head==0)
+        {
+            std::cout << "List is empty.\n";
+            return -1;
+        }
+
+        // Set maxValue to minimum
+        int maxValue = -1 ;
+        
+        // Create a tempNode for linked list traversal
+        Node *tempNode = head;
+        while(tempNode->next!=0)
+        {
+            // maxValue = max( maxValue, tempNode->data) ;
+            maxValue = (tempNode->data > maxValue) ? tempNode->data : maxValue ;
+            tempNode = tempNode->next;
+        }
+        maxValue = (tempNode->data > maxValue) ? tempNode->data : maxValue ;
+
+        return maxValue;
+    }
+
     void InsertAtTheBeginning (int val)
     {
         // Create a temporary node
