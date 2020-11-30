@@ -27,8 +27,28 @@ class LinkedList
     // TODO: Delete given value
     // TODO: Delete given index
     // TODO: Find middle element using 1 traversal
-    // TODO: Find the maximum element
-    // TODO: Find the minimum element
+
+    int FindMinValue (void)
+    {
+        if (head==0)
+        {
+            std::cout << "List is empty.\n";
+            return -1;
+        }
+
+        int minValue = 1e8 ;
+        
+        Node *tempNode = head;
+        while(tempNode->next!=0)
+        {
+            // Using ternary operator to compare
+            minValue = (tempNode->data < minValue) ? tempNode->data : minValue ;
+            tempNode = tempNode->next;
+        }
+        minValue = (tempNode->data < minValue) ? tempNode->data : minValue ;
+
+        return minValue;
+    }
 
     int FindMaxValue (void)
     {
@@ -38,14 +58,12 @@ class LinkedList
             return -1;
         }
 
-        // Set maxValue to minimum
         int maxValue = -1 ;
         
-        // Create a tempNode for linked list traversal
         Node *tempNode = head;
         while(tempNode->next!=0)
         {
-            // maxValue = max( maxValue, tempNode->data) ;
+            // Using ternary operator to compare
             maxValue = (tempNode->data > maxValue) ? tempNode->data : maxValue ;
             tempNode = tempNode->next;
         }
