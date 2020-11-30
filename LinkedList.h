@@ -28,6 +28,34 @@ class LinkedList
     // TODO: Delete given index
     // TODO: Find middle element using 1 traversal
 
+    int findMiddleValue (void)
+    {
+        if (head==0) return -1;
+
+        Node *jumper = head;
+        Node *walker = head;
+
+        while(true)
+        {
+            if (jumper->next==0)
+            {
+                // only one mid value.
+                return walker->data;
+            }
+            else if (jumper->next->next==0)
+            {
+                // 2 mid values
+                // TODO: retrive other mid value
+                return walker->data;
+            }
+            else
+            {
+                jumper = jumper->next->next; // jump 2 steps
+                walker = walker->next; // walk 1 step
+            }
+        }
+    }
+
     int FindMinValue (void)
     {
         if (head==0)
