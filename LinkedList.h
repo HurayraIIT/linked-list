@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class Node
 {
@@ -20,8 +21,6 @@ class LinkedList
 
     Node *head = 0;
 
-    // TODO: Insertion at the head
-    // TODO: Insertion at the end
     // TODO: Insertion at given index
     // TODO: Delete from the head
     // TODO: Delete from the end
@@ -31,6 +30,40 @@ class LinkedList
     // TODO: Find the maximum element
     // TODO: Find the minimum element
 
+    void InsertAtTheBeginning (int val)
+    {
+        // Create a temporary node
+        Node *tempNode = new Node(val);
+
+        // Assign tempNode as head
+        tempNode->next = head;
+        head = tempNode;
+    }
+
+    void InsertAtTheEnd (int val)
+    {
+        // Create a new node
+        Node *newNode = new Node(val);
+
+        // If linked list is empty, assign head as the new node
+        if (head==0)
+        {
+            head = newNode;
+            return;
+        }
+
+        // Create a temporary node for traversal
+        Node *currNode = head;
+
+        // Find the last node
+        while (currNode->next!=0)
+        {
+            currNode = currNode->next;
+        }
+
+        // Append new node after the last node
+        currNode->next = newNode;
+    }
 
     void PrintList (void)
     {
