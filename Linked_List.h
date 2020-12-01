@@ -13,7 +13,6 @@ class LinkedList
     // TODO: Delete from the end
     // TODO: Delete given value
     // TODO: Delete given index
-    // TODO: Find middle element using 1 traversal
 
     int findMiddleValue (void)
     {

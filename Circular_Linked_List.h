@@ -7,6 +7,8 @@ class CircularLinkedList
     public:
 
     Node *head = 0;
+    Node *tail = 0;
+    Node *entry = head;
 
     // TODO: 
     // TODO: 
@@ -14,17 +16,54 @@ class CircularLinkedList
     // TODO: 
 
 
-    void PrintList (void)
+    void SortedInsert (int val)
     {
-        Node *currentNode = head; 
+        Node *newNode = new Node(val);
 
-        if (currentNode==0)
+        if (head==0)
         {
-            std::cout << "Linked List is Empty.\n";
+            head = newNode;
+            tail = newNode;
+
+
+            return;
+        }
+        
+        if (head==tail)
+        {
+            if (newNode->data < head->data)
+            {
+                newNode->next = head;
+                head->next = newNode;
+                entry = newNode;
+            }
+            else
+            {
+                head->next = newNode;
+                newNode->next = head;
+            }
             return;
         }
 
-        std::cout << "List: ";
+        // TODO: insert after 2 already in
+        if (newNode->data < entry->data)
+        {
+
+        }
+
+    }
+
+    void PrintList (void)
+    {
+        Node *currentNode = head;
+
+        if (currentNode==0)
+        {
+            std::cout << "Circular Linked List is Empty.\n";
+            return;
+        }
+
+        std::cout << "List: (head)";
 
         while (currentNode->next!=head)
         {
@@ -33,5 +72,25 @@ class CircularLinkedList
         }
         std::cout << currentNode->data << " -> " << head->data << "(head)\n";
     }
+
+  /*   void PrintList (void)
+    {
+        Node *currentNode = entry;
+
+        if (currentNode==0)
+        {
+            std::cout << "Linked List is Empty.\n";
+            return;
+        }
+
+        std::cout << "List: (head)";
+
+        while (currentNode->next!=entry)
+        {
+            std::cout << currentNode->data << " -> ";
+            currentNode = currentNode->next;
+        }
+        std::cout << currentNode->data << " -> " << entry->data << "(head)\n";
+    } */
 
 };

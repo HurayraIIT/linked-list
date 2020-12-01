@@ -6,9 +6,14 @@
 
 int main()
 {
-    LinkedList list;
+/*  LinkedList list;
+    OperateLinkedList(&list); */
 
-    OperateLinkedList(&list);
+    CircularLinkedList list;
+    list.SortedInsert(12);
+    list.SortedInsert(10);
+    list.SortedInsert(11);
+    list.PrintList();
 
     return 0;
 }
