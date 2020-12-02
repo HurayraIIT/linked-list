@@ -17,6 +17,12 @@ class LinkedList : public Node
     * TODO: Find the last element 
 */
 
+    int findTheFirstValue (void)
+    {
+        if (head==0) return -1;
+        return head->data;
+    }
+
     int findTheLastValue (void)
     {
         if (head==0) return -1;
