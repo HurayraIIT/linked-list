@@ -2,17 +2,45 @@
 #include <iostream>
 #include "Node.h"
 
-class LinkedList
+class LinkedList : public Node
 {
     public:
 
     Node *head = 0;
 
     // TODO: Insertion at given index
-    // TODO: Delete from the head
-    // TODO: Delete from the end
     // TODO: Delete given value
     // TODO: Delete given index
+    // TODO: Find the last element
+
+    int findTheLastValue (void)
+    {
+        if (head==0) return -1;
+        Node *currentNode = head;
+        while(currentNode->next!=0)
+        {
+            currentNode = currentNode->next;
+        }
+        return currentNode->data;
+    }
+
+    void deleteHead (void)
+    {
+        if (head==0) return;
+        head = head->next;
+    }
+
+    void deleteFromTheEnd (void)
+    {
+        if (head==0) return;
+        
+        Node *currentNode = head;
+        while(currentNode->next!=0)
+        {
+            currentNode = currentNode->next;
+        }
+        currentNode = 0 ;
+    }
 
     int findMiddleValue (void)
     {
@@ -143,6 +171,12 @@ class LinkedList
         }
         // Print the last node
         std::cout << currentNode->data << " -> \n";
+    }
+
+    bool isEmpty (void)
+    {
+        if(head==0) return true;
+        return false;
     }
 
 };
