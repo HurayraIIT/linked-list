@@ -168,7 +168,7 @@ class LinkedList : public Node
         // Check if current node is empty
         if (currentNode==0)
         {
-            std::cout << "Linked List is Empty.\n";
+            std::cout << "List is Empty.\n";
             return;
         }
 
