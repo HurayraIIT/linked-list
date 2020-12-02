@@ -11,57 +11,22 @@
 
 #include "Circular_Linked_List.h"
 
+/**
+ * TODO: create UI for stack with linked list
+ * TODO: create UI for queue with linked list
+ * TODO: create UI for stack with queues
+ * TODO: create UI for queue with stacks
+ * TODO: refactor
+*/
+
 
 int main()
 {
 /*  LinkedList list;
     OperateLinkedList(&list); */
 
-    // LinkedList list;
-    // std::cout << list.isEmpty() << std::endl;
-    // list.InsertAtTheEnd(4);
-    // std::cout << list.isEmpty() << std::endl;
 
-    StackWithQueues stack;
-    stack.PrintStack();
-
-    stack.Push(3);
-    stack.Push(4);
-    stack.Push(5);
-    stack.Push(6);
-
-    stack.PrintStack();
-
-    stack.Pop();
-    stack.Pop();
-
-    stack.PrintStack();
-
-
-
-
-
-
-
-    // QueueWithLinkedList q;
-    // q.PrintQueue();
-
-    // q.Enqueue(1);
-    // q.Enqueue(2);
-    // q.Enqueue(3);
-    // q.Enqueue(4);
-
-    // q.PrintQueue();
-
-    // std::cout << "front: " << q.frontElement() << std::endl;
-
-    // q.Dequeue();
-    // std::cout << "front: " << q.frontElement() << std::endl;
-    // q.Dequeue();
-    // std::cout << "front: " << q.frontElement() << std::endl;
-
-    // q.PrintQueue();
-
+    //
 
     return 0;
 }
