@@ -8,10 +8,14 @@ class LinkedList : public Node
 
     Node *head = 0;
 
-    // TODO: Insertion at given index
-    // TODO: Delete given value
-    // TODO: Delete given index
-    // TODO: Find the last element
+    LinkedList (void) { head = 0; }
+
+/**
+    * TODO: Insertion at given index
+    * TODO: Delete given value
+    * TODO: Delete given index
+    * TODO: Find the last element 
+*/
 
     int findTheLastValue (void)
     {
@@ -32,14 +36,22 @@ class LinkedList : public Node
 
     void deleteFromTheEnd (void)
     {
-        if (head==0) return;
-        
-        Node *currentNode = head;
-        while(currentNode->next!=0)
+        Node *node = head;
+        if(node==0) return;
+        else if(node->next==0)
         {
-            currentNode = currentNode->next;
+            head = 0;
         }
-        currentNode = 0 ;
+        else
+        {
+            while(node->next->next!=0)
+            {
+                node = node->next;
+            }
+            
+            node->next = 0;
+        }
+
     }
 
     int findMiddleValue (void)
@@ -175,7 +187,7 @@ class LinkedList : public Node
 
     bool isEmpty (void)
     {
-        if(head==0) return true;
+        if (head==0) return true;
         return false;
     }
 

@@ -8,6 +8,8 @@ class Node
     int data;
     Node *next;
 
+    Node (void) {}
+
     Node (int val)
     {
         data = val;

@@ -7,6 +7,13 @@ class StackWithLinkedList
 
     LinkedList list;
 
+    StackWithLinkedList (void) {}
+
+    void PrintStack (void)
+    {
+        list.PrintList();
+    }
+
     void Push (int val)
     {
         list.InsertAtTheEnd(val);
@@ -14,10 +21,7 @@ class StackWithLinkedList
 
     void Pop (void)
     {
-        if (!list.isEmpty())
-        {
-            list.deleteFromTheEnd();
-        }
+        list.deleteFromTheEnd();
     }
 
     int Top (void)
