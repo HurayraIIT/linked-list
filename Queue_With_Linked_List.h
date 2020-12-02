@@ -29,4 +29,10 @@ class QueueWithLinkedList
     {
         return queue.isEmpty();
     }
+
+    int frontElement (void)
+    {
+        if(!queue.isEmpty()) return queue.findTheFirstValue();
+        return -1;
+    }
 };
