@@ -22,21 +22,46 @@ int main()
     // list.InsertAtTheEnd(4);
     // std::cout << list.isEmpty() << std::endl;
 
-    QueueWithLinkedList queue;
+    StackWithQueues stack;
+    stack.PrintStack();
 
-    queue.PrintQueue();
-    
-    queue.Enqueue(1);
-    queue.Enqueue(2);
-    queue.Enqueue(3);
-    queue.Enqueue(4);
+    stack.Push(3);
+    stack.Push(4);
+    stack.Push(5);
+    stack.Push(6);
 
-    queue.PrintQueue();
+    stack.PrintStack();
 
-    queue.Dequeue();
-    queue.Dequeue();
+    stack.Pop();
+    stack.Pop();
 
-    queue.PrintQueue();
+    stack.PrintStack();
+
+
+
+
+
+
+
+    // QueueWithLinkedList q;
+    // q.PrintQueue();
+
+    // q.Enqueue(1);
+    // q.Enqueue(2);
+    // q.Enqueue(3);
+    // q.Enqueue(4);
+
+    // q.PrintQueue();
+
+    // std::cout << "front: " << q.frontElement() << std::endl;
+
+    // q.Dequeue();
+    // std::cout << "front: " << q.frontElement() << std::endl;
+    // q.Dequeue();
+    // std::cout << "front: " << q.frontElement() << std::endl;
+
+    // q.PrintQueue();
+
 
     return 0;
 }
