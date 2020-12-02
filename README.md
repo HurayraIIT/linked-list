@@ -7,3 +7,7 @@ Implementation of cool linked list features I am learning.
 2. Implement Circular Linked List
 3. Implement Queue using 2 stacks
 4. Implement Stack using 2 queues
+
+# Code Structure
+
+![Code_Structure](/images/Code_structure.jpg)
